@@ -1,0 +1,17 @@
+services:
+
+  postgres:
+    container_name: cliente-simulacao-postgres
+    image: 'postgres:18'
+    ports:
+      - '5432:5432'
+    environment:
+      - 'POSTGRES_DB=clientesimulacao'
+      - 'POSTGRES_PASSWORD=clientesimulacao'
+      - 'POSTGRES_USER=clientesimulacao_user'
+    networks:
+      - cliente-simulacao
+
+networks:
+  cliente-simulacao:
+    driver: bridge

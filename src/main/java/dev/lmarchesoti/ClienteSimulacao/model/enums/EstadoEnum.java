@@ -1,0 +1,31 @@
+package dev.lmarchesoti.ClienteSimulacao.model.enums;
+
+public enum EstadoEnum {
+    AC,
+    AM,
+    AP,
+    PA,
+    RO,
+    RR,
+    TO,
+    DF,
+    GO,
+    MS,
+    MT,
+    AL,
+    BA,
+    CE,
+    MA,
+    PB,
+    PE,
+    PI,
+    RN,
+    SE,
+    ES,
+    MG,
+    RJ,
+    SP,
+    PR,
+    RS,
+    SC
+}
