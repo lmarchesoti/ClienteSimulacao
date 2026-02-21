@@ -1,6 +1,5 @@
 package dev.lmarchesoti.ClienteSimulacao.dto;
 
-import dev.lmarchesoti.ClienteSimulacao.model.Cliente;
 import dev.lmarchesoti.ClienteSimulacao.model.Simulacao;
 
 import java.math.BigDecimal;
