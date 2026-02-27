@@ -17,6 +17,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
@@ -72,6 +73,7 @@ class SimulacaoControllerIntegrationTest {
     @DisplayName("Should be able to retrieve simulacoes when valid idCliente is provided")
     void testSimulacoes_whenValidIdClienteIsProvidedAndClienteHasSimulacoes_shouldReturnAllSimulacoesBelongingToThatCliente() throws Exception {
         RequestBuilder requestBuilder = MockMvcRequestBuilders.get("/simulacoes")
+                .accept(MediaType.APPLICATION_JSON)
                 .param("idCliente", String.valueOf(idCliente));
         MvcResult result = mockMvc.perform(requestBuilder).andReturn();
         MockHttpServletResponse response = result.getResponse();

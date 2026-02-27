@@ -12,4 +12,5 @@ public class GlobalExceptionHandler {
     public ResponseEntity<Void> handleResourceNotFound(ResourceNotFoundException exception) {
         return ResponseEntity.notFound().build();
     }
+
 }
